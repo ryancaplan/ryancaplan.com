@@ -1,0 +1,292 @@
+/* Layout Styles*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	color: #ffffff;
+}
+
+section {
+	padding: 1em;
+}
+
+@media screen and (min-width: 670px ) {
+	
+	section {
+		padding: 2em;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.content {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 1em;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+
+
+
+/* Element Styles */
+
+h1 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 900;
+}
+
+h2 {
+	font-size: 1.4em;
+}
+
+h3 {
+	font-size: 1.2em;
+	margin-bottom: .2em;
+}
+
+h4 {
+	font-size: 1em;
+	margin-top: .4em;
+}
+
+
+@media screen and (min-width: 670px) {
+
+	h2 {
+		font-size: 2.2em;
+	}
+	
+	h3 {
+		font-size: 1.8em;
+		margin-bottom: .2em;
+	}
+	
+	h4 {
+		font-size: 1.2em;
+		margin-top: .4em;
+	}
+
+}
+
+@media screen and min-width: 945px) {
+
+	h2 {
+		font-size: 2.2em;
+	}
+	
+	h3 {
+		font-size: 1.8em;
+		margin-bottom: .2em;
+	}
+	
+	h4 {
+		font-size: 1.2em;
+		margin-top: .4em;
+	}
+
+}
+
+.button {
+	-webkit-appearance: none;
+	background-color: #0043B2;
+	color: #ffffff;
+	font-weight: bold;
+	border-radius: 1em;
+	border: 0;
+	padding: .5em 1em;
+	margin-bottom: 1.5em;
+	text-decoration: none;
+	font-size: 1em;
+}
+
+@media screen and (min-width: 670px) {
+
+	.button {
+		font-size: 1.2em;
+	}
+}
+
+
+
+
+/* Class and ID Styles */
+
+#intro {
+	background: #000000 url(../img/ryan-elliott-park.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+#intro-text {
+	padding: 1em;
+	background: rgba(0,0,0,.35);
+}
+
+@media screen and (min-width: 670px) {
+
+	#intro-text {
+		width: 75%;
+	}
+	
+}
+
+@media screen and (min-width: 945px) {
+
+	#intro-text {
+		margin: 2.4em 0em;
+		width: 45%;
+	}
+	
+}
+
+#intro-text h1 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 900;
+	font-size: 3em;
+	margin-bottom: .2em;
+	margin-top: .4em;
+}
+
+@media screen and (min-width: 670px) {
+
+	#intro-text h1 {
+		font-size: 4em;
+	}
+	
+}
+
+#intro-text h2 {
+	margin-top: .4em;
+}
+
+#intro-text ul,
+.item-text ul {
+	padding: 0;
+}
+
+#intro-text li,
+.item-text li {
+	list-style-type: none;
+	background-color: #F59100;
+	border-radius: 1em;
+	display: inline-block;
+	padding: .1em .6em;
+	margin: .2em .1em;	
+}
+
+#work {
+	background-color: grey;
+}
+
+footer {
+	background-color: #000000;
+	padding: 2em;
+}
+
+#footer-content {
+	padding: 1em;
+}
+
+footer ul {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+footer ul li {
+	display: inline-block;
+	margin: .5em;
+	list-style-type: none;
+	color: #ffffff;
+	width: 40px;
+	opacity: .8;
+	transition: opacity .5s;
+}
+
+footer ul li:hover {
+	opacity: 1;
+}
+
+
+
+/* Grid Styles */
+
+.grid-item {
+	display: block;
+	float: left;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+@media screen and (min-width: 670px) {
+	
+	.grid-item {
+		width: 50%;
+	}			
+	
+}		
+
+@media screen and (min-width: 1100px) {
+	
+	.grid-item {
+		width: 33.333333%;
+	}			
+	
+}
+
+.item-text {
+	display: block;
+	position: absolute;
+	color: #ffffff;
+	text-align: center;
+	padding: 1em;
+	top: 70%;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.5);
+	transition: top .5s;	
+}
+
+.grid-item:hover .item-text {
+	top: 0;
+}
+
+.grid-item img {
+	transform: scale(1.1);
+	transition: transform .8s;
+}
+
+.grid-item:hover img {
+	transform: scale(1.2);
+}
+
+.item-text h3:after {
+	content: " >";
+	opacity: .8;
+}
+
+.item-text h4,
+.item-text ul,
+.item-text a {
+	opacity: 0;
+	transition: opacity 1s;				
+}
+
+.grid-item:hover .item-text h4,
+.grid-item:hover .item-text ul,
+.grid-item:hover .item-text a {
+	opacity: 1;
+}

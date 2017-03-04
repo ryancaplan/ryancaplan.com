@@ -1,0 +1,12 @@
+Options -Indexes
+
+ErrorDocument 403 /403.shtml
+ErrorDocument 404 /404.shtml
+ErrorDocument 500 /500.shtml
+
+RewriteEngine On
+            RewriteCond %{HTTP_HOST} ^(www.)?ryancaplan.com$ [NC]
+            RewriteCond %{REQUEST_URI} ^/guidingpawsict/(.*)$
+            RewriteRule ^(.*)$ - [L,R=404]
+            
+            
